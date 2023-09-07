@@ -60,3 +60,8 @@ exports.addMovieToThreatre = async (req, res) => {
         return res.status(500).send({ message: "internal server error " + e.message })
     }
 }
+
+exports.checkMovieInTheatre = async (req, res) => {
+    const { movie, theatre } = req.metaData;
+    return res.status(200).send({ running: theatre.movies.includes(movie._id) })
+}

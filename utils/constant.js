@@ -10,10 +10,22 @@ const releaseStatusType = {
     blocked: "BLOCKED"
 }
 
+const userTypesAuth = {
+    customer: "CUSTOMER",
+    client: "CLIENT",
+    admin: "ADMIN"
+}
 
+const userStatusAuth = {
+    pending: "PENDING",
+    blocked: "BLOCKED",
+    approved: "APPROVED"
+}
 
 module.exports = {
     languageType,
-    releaseStatusType
+    releaseStatusType,
+    userTypesAuth,
+    userStatusAuth
 
 }

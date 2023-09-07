@@ -17,7 +17,8 @@ mongoose.connect(dbConfigs.DB_URL)
 
 app.use(bodyParser.json());
 require("./routes/movie.route")(app);
-require("./routes/theatre.route")(app)
+require("./routes/theatre.route")(app);
+require("./routes/auth.routes")(app);
 
 app.listen(serverConfigs.PORT, () => {
     console.log(`Application is running on PORT ${serverConfigs.PORT}`);
