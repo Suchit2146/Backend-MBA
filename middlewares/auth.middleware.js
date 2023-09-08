@@ -55,7 +55,7 @@ const verifySignInRequset = async (req, res, next) => {
         if (!user) {
             return res.status(404).send({ message: "userid doesnot exits" })
         }
-        if (!(user.userStatus === userStatusAuth.approved)) {
+        if (!(user.userStatus == userStatusAuth.approved)) {
             return res.status(404).send({ message: "user status  is not approved" })
         }
 
@@ -65,7 +65,7 @@ const verifySignInRequset = async (req, res, next) => {
         return res.status(500).send({ message: "something went wrong" })
     }
 
-    next()
+    next();
 }
 
 module.exports = {
