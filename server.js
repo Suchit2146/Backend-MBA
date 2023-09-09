@@ -25,6 +25,7 @@ require("./routes/movie.route")(app);
 require("./routes/theatre.route")(app);
 require("./routes/auth.routes")(app);
 require("./routes/booking.routes")(app)
+require("./routes/payment.routes")(app)
 
 app.listen(serverConfigs.PORT, () => {
     console.log(`Application is running on PORT ${serverConfigs.PORT}`);
