@@ -22,10 +22,18 @@ const userStatusAuth = {
     approved: "APPROVED"
 }
 
+const bookingStatus = {
+    inProgress: "INPROGRESS",
+    completed: "COMPLETED",
+    failed: "FAILED",
+    cancelled: "CANCELLED",
+    expired: "EXPIRED"
+}
+
 module.exports = {
     languageType,
     releaseStatusType,
     userTypesAuth,
-    userStatusAuth
-
+    userStatusAuth,
+    bookingStatus
 }
