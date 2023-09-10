@@ -5,9 +5,11 @@ const dbConfigs = require("./configs/db.configs");
 const serverConfigs = require("./configs/server.configs");
 const bodyParser = require("body-parser");
 const userModel = require("./models/user.model");
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcrypt");
+const cors = require("cors")
 
 const app = express();
+app.use(cors());
 
 mongoose.connect(dbConfigs.DB_URL)
     .then(() => {
